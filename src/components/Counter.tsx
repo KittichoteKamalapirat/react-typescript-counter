@@ -25,12 +25,28 @@ export const Counter: React.FC<CounterProps> = ({}) => {
           >
             ☝️ Increment
           </button>
+
+          <button
+            onClick={() => setCounter(counter + 10)}
+            disabled={counter > 90}
+          >
+            🚀 Increment by 10!
+          </button>
+
           <button
             onClick={() => setCounter(counter - 1)}
             disabled={counter <= 0}
           >
             👇 Decrement
           </button>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: 10,
+          }}
+        >
           <button onClick={() => setCounter(0)} disabled={counter <= 0}>
             🆑 Reset
           </button>
